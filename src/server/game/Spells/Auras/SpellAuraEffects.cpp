@@ -737,7 +737,7 @@ int32 AuraEffect::CalculateAmount(Unit *caster)
             }
             // Innervate
             else if (m_spellProto->Id == 29166)
-                amount = int32(GetBase()->GetUnitOwner()->GetCreatePowers(POWER_MANA) * amount / (GetTotalTicks() * 100.0f));
+                amount = int32(GetBase()->GetUnitOwner()->GetMaxPower(POWER_MANA) * amount / (GetTotalTicks() * 100.0f));
             // Owlkin Frenzy
             else if (m_spellProto->Id == 48391)
                 amount = GetBase()->GetUnitOwner()->GetCreatePowers(POWER_MANA) * amount / 100;
