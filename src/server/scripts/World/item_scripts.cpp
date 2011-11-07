@@ -163,7 +163,7 @@ public:
                 return false;
 
         if (itemId == 34061)
-            if (pPlayer->GetBaseSkillValue(SKILL_RIDING) == 300)
+            if (pPlayer->GetBaseSkillValue(SKILL_RIDING) >= 300)
                 return false;
 
         sLog->outDebug(LOG_FILTER_TSCR, "TSCR: Player attempt to use item %u, but did not meet riding requirement", itemId);
