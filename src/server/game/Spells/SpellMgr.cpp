@@ -2948,6 +2948,10 @@ DiminishingGroup GetDiminishingReturnsGroupForSpell(SpellEntry const* spellproto
             // Dragon's Breath
             else if (spellproto->SpellFamilyFlags[0] & 0x800000)
                 return DIMINISHING_KNOCKOUT;
+			// Ring of Frost "Freeze Effect" according to WoWWiki is categorized under "Disorient"
+			// Placed it under Controlled Root due to DIMINISHING_DISORIENT returning a compile error.
+			if (spellproto->Id == 82691)
+				return DIMINISHING_CONTROL_ROOT;
             break;
         }
         case SPELLFAMILY_ROGUE:
