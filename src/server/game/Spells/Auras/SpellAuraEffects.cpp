@@ -6350,7 +6350,7 @@ void AuraEffect::HandleAuraDummy(AuraApplication const *aurApp, uint8 mode, bool
                         {
                             int32 amount = GetAmount();
                             for (int i = 0; i < amount; i++)
-                                caster->CastSpell(target, 43836, true);
+                                caster->CastSpell(target, 95810, true);
                         }
                     }
                     // Haunt
